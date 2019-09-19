@@ -650,7 +650,7 @@ export default class extends Component {
             marginLeft: 3,
             marginRight: 3,
             marginTop: 3,
-            marginBottom: 0
+            marginBottom: -10
           },
           this.props.activeDotStyle
         ]}
@@ -667,7 +667,7 @@ export default class extends Component {
             marginLeft: 3,
             marginRight: 3,
             marginTop: 3,
-            marginBottom: 0
+            marginBottom: -10
           },
           this.props.dotStyle
         ]}
