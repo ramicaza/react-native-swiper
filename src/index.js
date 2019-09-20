@@ -105,6 +105,7 @@ export default class extends Component {
     horizontal: PropTypes.bool,
     children: PropTypes.node.isRequired,
     containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
+    buttonStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
     style: PropTypes.oneOfType([
       PropTypes.object,
       PropTypes.number,
@@ -174,7 +175,8 @@ export default class extends Component {
     autoplayTimeout: 2.5,
     autoplayDirection: true,
     index: 0,
-    onIndexChanged: () => null
+    onIndexChanged: () => null,
+    buttonStyle: {}
   }
 
   /**
@@ -725,7 +727,7 @@ export default class extends Component {
     let button = null
 
     if (this.props.loop || this.state.index !== 0) {
-      button = this.props.prevButton || <Text style={styles.buttonText}>‹</Text>
+      button = this.props.prevButton || <Text style={[styles.buttonText, this.props.buttonStyle]}>‹</Text>
     }
 
     return (
